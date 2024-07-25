@@ -6,6 +6,9 @@ Pascales Triangle
 
 
 def pascal_triangle(n):
+    """
+    the actual function
+    """
     if n <= 0:
         return []
 
