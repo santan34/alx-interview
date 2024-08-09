@@ -7,13 +7,16 @@ def minOperations(n):
     if n <= 1:
         return 0
 
-    operations = 0
-    factor = 2
+    hash = 2
+    opertions = 2
+    copy = 1
 
-    while n > 1:
-        while n % factor == 0:
-            operations += factor
-            n //= factor
-        factor += 1
-
-    return operations
+    while n != hash:
+        if n % hash == 0:
+            copy = hash
+            opertions += 2
+            hash += copy
+        else:
+            opertions += 1
+            hash += copy
+    return opertions
