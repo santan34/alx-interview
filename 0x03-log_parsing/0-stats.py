@@ -6,6 +6,7 @@ Log parsing
 import sys
 import re
 
+
 def output(log: dict) -> None:
     """
     Helper function to display stats.
@@ -14,6 +15,7 @@ def output(log: dict) -> None:
     for code in sorted(log["code_frequency"]):
         if log["code_frequency"][code] > 0:
             print("{}: {}".format(code, log["code_frequency"][code]))
+
 
 if __name__ == "__main__":
     # Regex pattern to match the log format
@@ -24,8 +26,16 @@ if __name__ == "__main__":
     line_count = 0
     log = {
         "file_size": 0,
-        "code_frequency": {str(code): 0 for code in [200, 301, 400, 401, 403, 404, 405, 500]}
-    }
+        "code_frequency": {
+            str(code): 0 for code in [
+                200,
+                301,
+                400,
+                401,
+                403,
+                404,
+                405,
+                500]}}
 
     try:
         for line in sys.stdin:
