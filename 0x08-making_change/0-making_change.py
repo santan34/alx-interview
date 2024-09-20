@@ -13,7 +13,7 @@ def makeChange(coins, total):
     count = 0
     sum = 0
     init_tot = total
-    if total == 0:
+    if total == 0 or total < 0:
         return 0
     while i < len(coins):
         if total - coins[i] >= 0:
