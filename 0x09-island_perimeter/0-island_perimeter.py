@@ -1,6 +1,10 @@
 #!/usr/bin/python3
+"""ISLAND PERIMETER QUESTION"""
 
 def island_perimeter(grid):
+    """THE MAIN FUNCTION
+    """
+    
     total = 0
     for i in range(len(grid)):
         for j in range(len(grid[i])):
@@ -10,6 +14,7 @@ def island_perimeter(grid):
 
 
 def scanner(matrix, i, j):
+    """CHECKS NEIGBOURS"""
     sum = 0
     if (j - 1 >= 0 and matrix[i][j - 1] == 0):
         sum += 1
